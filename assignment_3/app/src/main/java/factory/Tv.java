@@ -4,7 +4,7 @@ public class TV implements Product, EnergyConsumer, Display {
     
     private TV(){
         //takes a builder object
-        builder.build()
+        Builder.build()
     };
     
     private class Builder{

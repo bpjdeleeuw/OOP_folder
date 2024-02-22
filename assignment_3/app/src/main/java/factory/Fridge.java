@@ -81,5 +81,9 @@ public class Fridge implements Product, EnergyConsumer {
 
     };
 
+    public boolean getFreezer(){
+        return this.hasFreezer;
+    }
+
 
 }

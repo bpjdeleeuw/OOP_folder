@@ -2,12 +2,6 @@ package factory;
 
 import factory.Product;
 
-//Fridge implement Product, EnergyConsumer
-    //store a boolean whether the the fridge has a freezer, int on total volume in liter, String to store the brand of the fridge
-    //static factory methods to create common fridge types
-    //static Fridge createFreezer(String brand, int volume, double price) that constructs a fridge that has a freezer, the specified volume, brand and price, and runs on 240𝑉, 2𝐴. 
-    //static Fridge createFridge(String brand, int volume, double price)
-
 public class Fridge implements Product, EnergyConsumer {
     
     //initialize
@@ -36,11 +30,11 @@ public class Fridge implements Product, EnergyConsumer {
     @Override
     public String toString(){
 
-        private String freezerPrint;
+        String freezerPrint;
         if (this.hasFreezer){
-            this.freezerPrint = "a"
+            this.freezerPrint = "a";
         }else{
-            this.freezerPrint = "no"
+            this.freezerPrint = "no";
         }
 
         return String.format("This %s Fridge costs %f, runs on %f V, %f amps, has a total volume of %x, has %s freezer. ", this.brand, this.price, this.voltage, this.current, this.totalVolume, freezerPrint);
@@ -66,7 +60,7 @@ public class Fridge implements Product, EnergyConsumer {
         double current = 2;
         double voltage = 240;
         
-    return new Fridge(price, voltage, current, hasFreezer, totalVolume, brand)
+    return new Fridge(price, voltage, current, hasFreezer, totalVolume, brand);
 
     };
     public static Fridge createFridge(String brand, int totalVolume, double price){
@@ -75,7 +69,7 @@ public class Fridge implements Product, EnergyConsumer {
         double current = 2;
         double voltage = 240;
         
-        return new Fridge(price, voltage, current, hasFreezer, totalVolume, brand)
+        return new Fridge(price, voltage, current, hasFreezer, totalVolume, brand);
 
     };
 

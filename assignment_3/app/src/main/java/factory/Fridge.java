@@ -20,17 +20,6 @@ public class Fridge implements Product, EnergyConsumer {
     private int totalVolume;
     private String brand;
 
-    // //constructor
-    // private Fridge(double price, double voltage, double current, boolean hasFreezer, int totalVolume, String brand){
-    //     this.price = price;
-    //     this.voltage = voltage;
-    //     this.current = current;
-    //     this.hasFreezer = hasFreezer;
-    //     this.totalVolume = totalVolume;
-    //     this.brand = brand;
-    // }
-
-
     //Override product methods
     @Override 
     public double getPrice() {

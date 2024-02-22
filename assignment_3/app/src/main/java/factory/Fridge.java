@@ -49,7 +49,15 @@ public class Fridge implements Product, EnergyConsumer {
     public double getVoltage() {
         return this.voltage;
     }
-
+    //make constructor
+    private Fridge(double price, double voltage, double current, boolean hasFreezer, int totalVolume, String brand){
+        this.price = price;
+        this.voltage = voltage;
+        this.current = current;
+        this.hasFreezer = hasFreezer;
+        this.totalVolume = totalVolume;
+        this.brand = brand;
+    }
 
     //use static factory methods to create instances of Fridge
     public static Fridge createFreezer(String brand, int totalVolume, double price){

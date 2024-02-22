@@ -56,8 +56,7 @@ public class Warehouse {
         // visit(Chair chair), void visit(Fridge fridge), void visit(Tv tv).
         // This procedure should:
         // • Create a class implementing the ProductVisitor interface, which:
-        // – Discounts every wooden chair by 15%, while increasing the price of metal
-        // chairs by 12%.
+        // –
         // – Discounts every Samsung fridge by 5%.
         // – Discounts every TV having 2 or more DP connectors by 30%.
         // • Iterate over all products and call product.accept(visitor).
@@ -73,10 +72,34 @@ public class Warehouse {
         void visit(TV tv);
     }
 
-    public class Productiterator implements ProductVisitor{
+    public class Productmodifier implements ProductVisitor{
         
+        public visit(Chair chair){
+            //Discounts every wooden chair by 15%, while increasing the price of metal
+            // chairs by 12%.
+        }
+
+        public visit(Fridge fridge){
+            //Discounts every Samsung fridge by 5%.
+        }
+
+        public visit(TV tv){
+            //Discounts every TV having 2 or more DP connectors by 30%.   
+        }
+
+        // This procedure should:
+        // • Create a class implementing the ProductVisitor interface, which:
+        // – Discounts every wooden chair by 15%, while increasing the price of metal
+        // chairs by 12%.
+        // – Discounts every Samsung fridge by 5%.
+        // – Discounts every TV having 2 or more DP connectors by 30%.
+        // • Iterate over all products and call product.accept(visitor).
+
     }
 
+    public class ProductIterator{
+        
+    }
     @Override
     public String toString() {
         // TODO implement

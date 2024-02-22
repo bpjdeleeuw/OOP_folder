@@ -67,12 +67,15 @@ public class Warehouse {
         //you make a new class visitor which you place between the class and the calling
     }
 
-    public ProductVisitor{
+    public interface ProductVisitor{
         void visit(Chair chair);
         void visit(Fridge fridge);
         void visit(TV tv);
     }
 
+    public class Productiterator implements ProductVisitor{
+        
+    }
 
     @Override
     public String toString() {

@@ -12,7 +12,6 @@ public class Fridge implements Product, EnergyConsumer {
     
     //initialize
     private double price;
-    private String material;
     
     private double voltage;
     private double current;
@@ -36,9 +35,16 @@ public class Fridge implements Product, EnergyConsumer {
     }
     @Override
     public String toString(){
-        return String.format("This %s Fridge cost %f", this.material, this.price);
-    }
 
+        private String freezerPrint;
+        if (this.hasFreezer){
+            this.freezerPrint = "a"
+        }else{
+            this.freezerPrint = "no"
+        }
+
+        return String.format("This %s Fridge costs %f, runs on %f V, %f amps, has a total volume of %x, has %s freezer. ", this.brand, this.price, this.voltage, this.current, this.totalVolume, freezerPrint);
+    }
 
     //Override energyconsumer methods
     @Override

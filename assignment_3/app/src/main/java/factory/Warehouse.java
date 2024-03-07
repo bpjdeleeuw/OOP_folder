@@ -64,42 +64,43 @@ public class Warehouse {
         //visitor allows adding new behaviour to exisiting classes without altering any existing code. 
 
         //you make a new class visitor which you place between the class and the calling
-    }
 
-    public interface ProductVisitor{
-        void visit(Chair chair);
-        void visit(Fridge fridge);
-        void visit(TV tv);
-    }
-
-    public class Productmodifier implements ProductVisitor{
+        public class Productmodifier implements ProductVisitor{
         
-        public visit(Chair chair){
-            //Discounts every wooden chair by 15%, while increasing the price of metal
+            public visit(Chair chair){
+                //Discounts every wooden chair by 15%, while increasing the price of metal
+                // chairs by 12%.
+            }
+    
+            public visit(Fridge fridge){
+                //Discounts every Samsung fridge by 5%.
+            }
+    
+            public visit(TV tv){
+                //Discounts every TV having 2 or more DP connectors by 30%.   
+            }
+    
+            // This procedure should:
+    
+            // – Discounts every wooden chair by 15%, while increasing the price of metal
             // chairs by 12%.
+            // – Discounts every Samsung fridge by 5%.
+            // – Discounts every TV having 2 or more DP connectors by 30%.
+    
         }
-
-        public visit(Fridge fridge){
-            //Discounts every Samsung fridge by 5%.
-        }
-
-        public visit(TV tv){
-            //Discounts every TV having 2 or more DP connectors by 30%.   
-        }
-
-        // This procedure should:
-        // • Create a class implementing the ProductVisitor interface, which:
-        // – Discounts every wooden chair by 15%, while increasing the price of metal
-        // chairs by 12%.
-        // – Discounts every Samsung fridge by 5%.
-        // – Discounts every TV having 2 or more DP connectors by 30%.
+    
         // • Iterate over all products and call product.accept(visitor).
-
+    
+        public void iterate(List[] products, ProductVisitor visitor){
+            for(Product product : products){
+                product.accept(visitor);
+            }
+        }        
+    
     }
-
-    public class ProductIterator{
         
-    }
+    // • Create a class implementing the ProductVisitor interface, which:
+ 
     @Override
     public String toString() {
         // TODO implement
